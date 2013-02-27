@@ -5,7 +5,7 @@
 <meta property="og:url" content="{{ canonical }}" />
 <meta property="og:description" content="{{ description | strip_html | condense_spaces | truncate:150 }}" />
 {% if page.ogimage %}<meta property="og:image" content="{{ page.ogimage }}" /><meta itemprop="image" content="{{ page.ogimage }}" />{% endif %}
-<meta property="og:site_name" content="blog.chh.tw" />
+<meta property="og:site_name" content="{{ site.url }}" />
 <meta property="article:author" content="https://plus.google.com/114787528537231301324">
 {% if page.date %}<meta property="article:published_time" content="{{ page.date }}" />{% endif %}
 {% capture category %}{% if page.categories %}{{ page.categories }}{% endif %}{% endcapture %}
@@ -14,13 +14,5 @@
 {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}" />{% for keyword in page.keywords %}<meta property="article:tag" content="{{ keyword | replace: ',', '' }}" />{% endfor %}{% endif %}
 <!-- Combine multiple fonts into one request -->
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic|Patua+One|Yanone+Kaffeesatz" rel="stylesheet" type="text/css">
-<!-- Bing 網站管理員 -->
-<meta name="msvalidate.01" content="19C515A71936824B4CDA6CD6E8212149" />
-<!-- Facebook Insight -->
-<meta property="fb:admins" content="100003742510626" />
 <!-- jQuery -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<!-- PICTOS -->
-<link href="//get.pictos.cc/fonts/2537/2" rel="stylesheet" type="text/css">
-<!-- Google+ -->
-<link rel="author" href="https://plus.google.com/114787528537231301324">
