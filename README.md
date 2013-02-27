@@ -21,3 +21,9 @@ Modify `_config.yml` to disable sidebar:
 default_asides: []
 sidebar: collapse
 ```
+
+Create about page:
+
+```
+rake new_page[about/index.md]
+```
