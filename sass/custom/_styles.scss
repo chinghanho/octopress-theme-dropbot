@@ -1,0 +1,77 @@
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to make changes without digging in too much
+
+// Import
+@import "icomoon";
+@import "footnotes";
+@import "tablestyle";
+@import "background";
+@import "header";
+@import "navigation";
+@import "article";
+@import "footer";
+
+// Main layout
+html {
+  body > div > div {
+    border-right: none;
+  }
+
+  i.icon { // 使用 Pictos 的 icon font
+    font-family: 'Pictos Custom';
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+  }
+
+  ::selection {
+    color: hsl(0, 0, 100%);
+    background: hsl(0, 0, 0); /* Safari */
+    }
+  ::-moz-selection {
+    color: hsl(0, 0, 100%);
+    background: hsl(0, 0, 0); /* Firefox */
+  }
+}
+
+// Responsive design
+@media only screen and (min-width: 1037px) {
+  body > nav {
+    @include border-top-radius(.4em);
+  }
+
+  body > footer {
+    @include border-bottom-radius(.4em);
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  body > header > hgroup {
+    section div#banner {
+      display: none;
+    }
+  }
+}
+
+// the divider between links in navigator
+@media only screen and (min-width: 992px) {
+  .divider {
+    height: 48px; /* this */
+    margin: -.57em 0em 0em 0em;  /* pulls the border to the top of the header */
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .divider {
+    height: 42px; /* this */
+    margin: -.57em 0em 0em 0em;  /* pulls the border to the top of the header */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .divider {
+    height: 40px;
+    margin: -.53em 0 0 0;
+  }
+}
