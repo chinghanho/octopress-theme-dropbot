@@ -1,6 +1,6 @@
 # Dropbot
 
-A Octopress theme for my personal blog.
+Octopress theme for my personal blog.
 
 ## Example
 
